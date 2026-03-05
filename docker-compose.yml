@@ -1,0 +1,14 @@
+services:
+  claude-telegram-bot:
+    build: .
+    container_name: claude-telegram-bot
+    restart: unless-stopped
+    volumes:
+      # 挂载 Claude 配置目录，复用认证状态
+      - ~/.claude:/home/appuser/.claude
+      # 挂载会话持久化文件
+      - ./sessions.json:/app/sessions.json
+      # 挂载日志文件
+      - ./bot.log:/app/bot.log
+    env_file:
+      - .env
