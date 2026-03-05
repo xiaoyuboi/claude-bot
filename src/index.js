@@ -21,7 +21,8 @@ if (telegramToken) {
 }
 
 if (feishuAppId && feishuAppSecret) {
-  logger.info('Starting Feishu Bot...');
+  // Use WebSocket mode
+  logger.info('Starting Feishu Bot (WebSocket mode)...');
   const feishuBot = createFeishuBot(feishuAppId, feishuAppSecret);
   const feishuHandle = feishuBot.start();
   bots.push({ name: 'Feishu', stop: () => feishuHandle.stop() });

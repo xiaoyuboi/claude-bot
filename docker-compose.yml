@@ -6,9 +6,16 @@ services:
     volumes:
       # 挂载 Claude 配置目录，复用认证状态
       - ~/.claude:/home/appuser/.claude
+      # 挂载 Coding 目录
+      - ~/Coding:/home/appuser/Coding
+      # 挂载 Docker socket，操作宿主机 Docker
+      - /var/run/docker.sock:/var/run/docker.sock
       # 挂载会话持久化文件
       - ./sessions.json:/app/sessions.json
       # 挂载日志文件
       - ./bot.log:/app/bot.log
     env_file:
       - .env
+    # 添加 Docker 命令权限
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

@@ -4,7 +4,7 @@ const path = require('path');
 const { logger } = require('./logger');
 
 // Session file path
-const SESSION_FILE = path.join('/app', 'sessions.json');
+const SESSION_FILE = path.join(__dirname, '..', 'sessions.json');
 
 // Session management - store session IDs per chat
 const sessions = new Map();
