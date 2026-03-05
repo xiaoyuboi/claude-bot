@@ -7,13 +7,20 @@
     "start": "node src/index.js",
     "dev": "node src/index.js"
   },
-  "keywords": ["claude", "bot", "telegram", "feishu"],
+  "keywords": [
+    "claude",
+    "bot",
+    "telegram",
+    "feishu"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "node-telegram-bot-api": "^0.64.0",
+    "axios": "^1.13.6",
     "dotenv": "^16.3.1",
+    "node-telegram-bot-api": "^0.64.0",
     "pino": "^9.0.0",
-    "pino-pretty": "^11.0.0"
+    "pino-pretty": "^11.0.0",
+    "ws": "^8.19.0"
   }
 }
