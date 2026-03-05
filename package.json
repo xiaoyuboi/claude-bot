@@ -1,13 +1,13 @@
 {
-  "name": "claude-telegram-bot",
+  "name": "claude-bot",
   "version": "1.0.0",
-  "description": "Telegram bot that communicates with Claude Code CLI",
+  "description": "Claude bot for Telegram, Feishu and more platforms",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
     "dev": "node src/index.js"
   },
-  "keywords": ["telegram", "claude", "bot"],
+  "keywords": ["claude", "bot", "telegram", "feishu"],
   "author": "",
   "license": "MIT",
   "dependencies": {
